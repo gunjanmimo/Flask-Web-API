@@ -5,25 +5,25 @@ from APPLICATION.paymentValidation import *
 
 def abortInvalid_CreditCardNumber(CreditCardNumber):
     if not valid_CreditCardNumber(CreditCardNumber):
-        abort(400, message="put a valid CreditCardNumber")
+        abort(400)
 
 
 def abortInvalid_CardHolder(CardHolder):
     if not valid_CardHolderName(CardHolder):
-        abort(400, message="put a valid Name")
+        abort(400)
 
 
 def abortInvalid_ExpirationDate(ExpirationDate):
     if not valid_ExpirationDate(ExpirationDate):
-        abort(400, message="put a valid ExpirationDate")
+        abort(400)
 
 
 def abortInvalid_SecurityCode(SecurityCode):
-    if not valid_SecurityCode(SecurityCode): abort(400, message="put a valid SecurityCode")
+    if not valid_SecurityCode(SecurityCode): abort(400)
 
 
 def abortInvalid_Amount(Amount):
-    if not valid_Amount(Amount): abort(400, message="put a valid Amount")
+    if not valid_Amount(Amount): abort(400)
 
 
 def dataAbort(CreditCardNumber, CardHolder, ExpirationDate, SecurityCode, Amount):
